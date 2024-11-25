@@ -13,7 +13,7 @@
 
 ## 2.1 EDA 및 Preprocessing
 
-![EDA 및 Preprocessing](https://raw.githubusercontent.com/sykverse/Question-Answering/refs/heads/main/images/Screenshot_2024-11-25_at_12.59.43_PM.png?token=GHSAT0AAAAAAC26VTXUN7FT5ILXCK3GNHO2Z2D7L2Q)
+![EDA 및 Preprocessing](https://raw.githubusercontent.com/kkogggokk/QuestionAnswering/refs/heads/main/images/Screenshot_2024-11-25_at_12.59.43_PM.png)
 
 - **동일 Context와 Question에 대한 다른 Answers 문제**<br>동일 지문과 질문에 대해 여러 답변이 존재하는 약 1만 개의 데이터 확인. 평가 지표가 답변 길이에 민감하므로, 가장 짧은 답변만을 선택한 방식과 모든 답변을 활용한 방식을 비교. 결과적으로 모든 데이터를 활용한 방법이 더 나은 성능을 기록.
 - **Data Augmentation**<br>AIHub MRC 데이터를 활용하여 짧은 문장, 긴 문장, 두 가지 형태 모두를 추가하는 방식으로 실험. 짧은 문장만을 추가했을 때 가장 높은 성능을 달성했으나, 도메인 불일치로 인해 증강 후 성능 저하 발생. 
@@ -21,7 +21,7 @@
 
 ## 2.2 모델 선정 및 분석
 
-![모델 선정 및 분석](https://raw.githubusercontent.com/sykverse/Question-Answering/refs/heads/main/images/Screenshot_2024-11-25_at_12.58.58_PM.png?token=GHSAT0AAAAAAC26VTXVL3PASZNCQZG745JWZ2D7MOQ)
+![모델 선정 및 분석](https://raw.githubusercontent.com/kkogggokk/QuestionAnswering/refs/heads/main/images/Screenshot_2024-11-25_at_12.58.58_PM.png)
 
 - Pretrained 모델로 KLUE/BERT-base와 KLUE/RoBERTa-base를 선택.
     - 주어진 데이터만 학습 시 BERT가 더 높은 성능을 기록
@@ -30,7 +30,7 @@
 
 ## 2.3 모델 평가 및 개선
 
-![모델 평가 및 개선](https://raw.githubusercontent.com/sykverse/Question-Answering/refs/heads/main/images/Screenshot_2024-11-25_at_12.58.27_PM.png?token=GHSAT0AAAAAAC26VTXVHOKAPQKME5LSMTO2Z2D7NAA)
+![모델 평가 및 개선](https://raw.githubusercontent.com/kkogggokk/QuestionAnswering/refs/heads/main/images/Screenshot_2024-11-25_at_12.58.27_PM.png)
 
 - Hyper-parameter Tuning:Batch Size, Epoch, Optimizer, Learning Rate, Scheduler 등을 조합해 실험. RAdam과 Scheduler를 추가했을 때 더 좋은 성능을 보임.
 - Evaluation Metrics:편집거리와 EM Score를 지표로 활용.
